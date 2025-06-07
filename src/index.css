@@ -1,0 +1,132 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 190 100% 98%;
+    --foreground: 200 84% 15%;
+
+    --card: 190 50% 96%;
+    --card-foreground: 200 84% 15%;
+
+    --popover: 190 100% 98%;
+    --popover-foreground: 200 84% 15%;
+
+    --primary: 180 85% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 170 40% 90%;
+    --secondary-foreground: 200 84% 15%;
+
+    --muted: 170 40% 92%;
+    --muted-foreground: 200 30% 45%;
+
+    --accent: 175 50% 88%;
+    --accent-foreground: 200 84% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 31.8% 85%;
+    --input: 180 31.8% 85%;
+    --ring: 180 85% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 190 100% 98%;
+    --sidebar-foreground: 200 5.3% 26.1%;
+    --sidebar-primary: 180 85% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 175 50% 88%;
+    --sidebar-accent-foreground: 200 84% 15%;
+    --sidebar-border: 180 31.8% 85%;
+    --sidebar-ring: 180 85% 60%;
+
+    --chat-bg-1: linear-gradient(135deg, #e0f7fa 0%, #e8f5e8 50%, #f0f9ff 100%);
+    --chat-bg-2: linear-gradient(135deg, #b2ebf2 0%, #c8e6c9 50%, #e1f5fe 100%);
+    --chat-bg-3: linear-gradient(135deg, #e0f2f1 0%, #e8f5e8 50%, #e3f2fd 100%);
+  }
+
+  .dark {
+    --background: 200 40% 8%;
+    --foreground: 190 100% 95%;
+
+    --card: 200 40% 10%;
+    --card-foreground: 190 100% 95%;
+
+    --popover: 200 40% 8%;
+    --popover-foreground: 190 100% 95%;
+
+    --primary: 180 85% 70%;
+    --primary-foreground: 200 40% 8%;
+
+    --secondary: 180 20% 15%;
+    --secondary-foreground: 190 100% 95%;
+
+    --muted: 180 20% 15%;
+    --muted-foreground: 200 20% 65%;
+
+    --accent: 180 20% 18%;
+    --accent-foreground: 190 100% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 190 100% 95%;
+
+    --border: 180 20% 15%;
+    --input: 180 20% 15%;
+    --ring: 180 85% 70%;
+
+    --sidebar-background: 200 40% 8%;
+    --sidebar-foreground: 190 100% 95%;
+    --sidebar-primary: 180 85% 70%;
+    --sidebar-primary-foreground: 200 40% 8%;
+    --sidebar-accent: 180 20% 18%;
+    --sidebar-accent-foreground: 190 100% 95%;
+    --sidebar-border: 180 20% 15%;
+    --sidebar-ring: 180 85% 70%;
+
+    --chat-bg-1: linear-gradient(135deg, #0f3c42 0%, #1e3a34 50%, #2d3748 100%);
+    --chat-bg-2: linear-gradient(135deg, #1e4347 0%, #2e4a3e 50%, #3d4852 100%);
+    --chat-bg-3: linear-gradient(135deg, #0e3d39 0%, #1d4033 50%, #2c4a47 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .chat-background {
+    background: var(--chat-bg-1);
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(129, 212, 250, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(134, 239, 172, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(186, 230, 253, 0.2) 0%, transparent 50%);
+  }
+
+  .chat-background-alt {
+    background: var(--chat-bg-2);
+    background-image: 
+      radial-gradient(circle at 60% 20%, rgba(165, 243, 252, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 20% 60%, rgba(187, 247, 208, 0.3) 0%, transparent 50%);
+  }
+
+  .header-gradient {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #10b981 100%);
+  }
+
+  .card-gradient {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.9) 0%, rgba(236, 253, 245, 0.9) 100%);
+    backdrop-filter: blur(10px);
+  }
+}
+
